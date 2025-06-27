@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sinh Nhật MindX</title>
+    <style>
+    body {
+      margin: 0;
+      background-color: #e30613;
+      font-family: Arial, sans-serif;
+      color: white;
+      text-align: center;
+    }
+    .container {
+      padding: 52px 20px;
+    }
+    .box {
+      background-color: white;
+      color: #e30613;
+      border-radius: 20px;
+      padding: 20px;
+      display: inline-block;
+      max-width: 700px;
+      width: 100%;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+    .title-main {
+      font-size: 50px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .subtitle-main {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+    .promo-title {
+      font-size: 30px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .voucher-count {
+      font-size: 50px;
+      font-weight: bold;
+      color: #e30613;
+    }
+    .voucher-label {
+      font-weight: bold;
+      font-size: 20px;
+      margin-bottom: 50px;
+    }
+    .benefits {
+      font-weight: bold;
+      font-size: 20px;
+      margin: 20px 0;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 20px;
+    }
+    .time-label {
+      font-size: 20px;
+      margin-top: 40px;
+      font-weight: bold;
+    }
+    .clock {
+      font-weight: bold;
+      font-size: 24px;
+      margin-top: 7px;
+    }
+    .note {
+      font-size: 15px;
+      margin-top: 20px;
+      color: #e30613;
+      opacity: 0.8;
+    }
+    .fixed-logo img {
+      max-height: 100px;
+      margin-bottom: 20px;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="fixed-logo">
+          <img src="https://lh4.googleusercontent.com/JIMPjKfVX4xHGTH1OevjMe2WFz-WS3dmGiWe3kixo6OakSlIhfsXMl95ViXCk0JAktmLFgbr1aTq8tsTBI12rkp51oaS3iUrB5G1BKAQrZtUAdgXQtJkbquc8sdJB34G7ui1q-ewCHd66qy-Nqndipqj8pFw44SsRfedVsQ8ppoogiWfvJDXcw=w1280" alt="mindX Logo">
+        </div>
+        <div class="title-main">SINH NHẬT MINDX VĨNH PHÚC</div>
+        <div class="subtitle-main">CHỈ ÁP DỤNG CHO KHU VỰC VĨNH PHÚC</div>
+    
+        <div class="box">
+          <div class="promo-title">Chương trình khuyến mại trong 2 ngày cuối tuần 28/6 - 29/6</div>
+          <div class="voucher-count">6</div>
+          <div class="voucher-label">Số lượng còn lại</div>
+    
+          <div class="benefits"><span>12 Tháng:</span><span>Giảm 500.000 VND *</span></div>
+          <div class="benefits"><span>24 Tháng:</span><span>Giảm 1.000.000 VND *</span></div>
+          <div class="benefits"><span>Bảo trợ:</span><span>Giảm 15% *</span></div>
+    
+          <div class="time-label">Thời gian hiện tại</div>
+          <div class="clock" id="time">--:--:--</div>
+          <div class="note">* Ưu đãi kết thúc khi hết thời gian hoặc hết số lượng</div>
+        </div>
+      </div>
+    
+      <script>
+        function updateTime() {
+          const now = new Date();
+          const h = now.getHours().toString().padStart(2, '0');
+          const m = now.getMinutes().toString().padStart(2, '0');
+          const s = now.getSeconds().toString().padStart(2, '0');
+          document.getElementById('time').textContent = `${h}:${m}:${s}`;
+        }
+        setInterval(updateTime, 1000);
+        updateTime();
+      </script>
+</body>
+</html>
